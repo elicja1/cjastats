@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CJA Middle School Soccer Stats</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; background: #f4f4f4; }
+        .container { max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h1 { color: #004400; text-align: center; }
+        .game-card { border: 1px solid #ddd; margin-bottom: 10px; border-radius: 5px; overflow: hidden; }
+        .game-header { background: #eee; padding: 10px; cursor: pointer; font-weight: bold; display: flex; justify-content: space-between; }
+        .game-header:hover { background: #e0e0e0; }
+        .stats-content { display: none; padding: 10px; background: #fff; border-top: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
+        th { background: #004400; color: white; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>CJA Soccer Team Stats ⚽</h1>
+    
+    <div id="games-list">
+        <div class="game-card">
+            <div class="game-header" onclick="toggleStats('game1')">
+                <span>March 10 vs. Warriors</span>
+                <span>▼</span>
+            </div>
+            <div id="game1" class="stats-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Goals</th>
+                            <th>Assists</th>
+                            <th>Shots</th>
+                            <th>Saves</th>
+                            <th>Minutes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Player 1</td><td>1</td><td>0</td><td>3</td><td>0</td><td>40</td></tr>
+                        <tr><td>Player 2</td><td>0</td><td>1</td><td>1</td><td>0</td><td>35</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        </div>
+</div>
+
+<script>
+    function toggleStats(id) {
+        var content = document.getElementById(id);
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
